@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body h1 {
+  margin-bottom: 20px;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+body aside {
+  width: 100px;
+  height: 640px;
+  color: #3d3d3d;
+}
+body aside .radioButtons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body aside .radioButtons label.active {
+  box-shadow: 0px 4px 0px 0px rgb(155, 155, 155);
+  background-color: #3d3d3d;
+  color: white;
+}
+body aside .radioButtons input:not([id=colorPicker]) {
+  visibility: hidden;
+}
+body aside .radioButtons input[id=colorPicker] {
+  height: 20px;
+  width: 20px;
+  border: none;
+}
+body aside .radioButtons label[for=black] {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+body aside .radioButtons input + label {
+  display: block;
+  border: 1px solid #9b9b9b;
+  height: 50px;
+  width: 135px;
+  padding-top: 15px;
+  text-align: center;
+  position: relative;
+}
+body aside .radioButtons input + label:active {
+  top: 5px;
+}
+body aside .radioButtons span {
+  pointer-events: none;
+}
+body .pixelContainer {
+  box-sizing: content-box;
+  width: 640px;
+  height: 640px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  outline: 1px solid #9b9b9b;
+  justify-content: center;
+  transform: scale(1);
+  transform-origin: center;
+}
+body .pixelContainer.no-border .pixel {
+  box-shadow: none;
+}
+body .pixelContainer .pixel {
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 0.6px rgba(70, 70, 70, 0.4);
+  background-clip: padding-box;
+}
+body dialog {
+  margin: auto;
+  width: 500px;
+  height: 140px;
+}
+body dialog form {
+  padding: 20px 40px;
+}
+body dialog form p {
+  margin-bottom: 19px;
+}
+body dialog form input {
+  margin-top: 5px;
+}
+body dialog form button {
+  font-size: 16px;
+  border: 1px solid #9b9b9b;
+  background-color: white;
+  padding: 5px 10px;
+  position: relative;
+}
+body dialog form button:hover {
+  background-color: #3d3d3d;
+  color: white;
+}
+body dialog form button:active {
+  top: 2px;
+}
+
+/*# sourceMappingURL=style.css.map */

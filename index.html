@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Etch-a-Sketch</h1>
+    <main>
+      <aside>
+        <div class="radioButtons">
+          <div class="radioButton">
+            <input id="black" type="radio" name="penOptions" />
+            <label for="black">
+              <span>Color</span> <input type="color" id="colorPicker"
+            /></label>
+            <label for="colorPicker"></label>
+          </div>
+          <div class="radioButton">
+            <input id="rainbow" type="radio" name="penOptions" />
+            <label for="rainbow">Rainbow</label>
+          </div>
+          <div class="radioButton">
+            <input id="brighten" type="radio" name="penOptions" />
+            <label for="brighten">Brighten</label>
+          </div>
+          <div class="radioButton">
+            <input id="darken" type="radio" name="penOptions" />
+            <label for="darken">Darken</label>
+          </div>
+        </div>
+      </aside>
+      <section class="pixelContainer"></section>
+      <aside>
+        <div class="radioButtons right">
+          <div class="radioButton">
+            <input id="eraser" type="radio" name="penOptions" />
+            <label for="eraser">Eraser</label>
+          </div>
+          <div class="radioButton">
+            <input id="removeBorders" type="radio" name="penOptions" />
+            <label for="removeBorders">Remove Borders</label>
+          </div>
+          <div class="radioButton">
+            <input id="changeSize" type="radio" name="penOptions" />
+            <label for="changeSize">Change Size</label>
+          </div>
+          <div class="radioButton">
+            <input id="clear" type="radio" name="penOptions" />
+            <label for="clear">Clear</label>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <dialog id="changePixelWidth">
+      <form method="dialog">
+        <p>
+          <label>
+            Please enter row length (1-100)
+            <strong>[current length is <span id="totalSize"></span>]</strong>:
+            <input
+              id="pixels"
+              type="number"
+              name="pixels"
+              step="1"
+              min="1"
+              max="100"
+              placeholder=""
+              required
+            />
+          </label>
+        </p>
+        <div>
+          <button id="submitBtn">Submit</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
